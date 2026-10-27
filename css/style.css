@@ -1,0 +1,789 @@
+/* -------------------------------------------------
+   Apoorva Birthday Website
+   Shared Styles
+-------------------------------------------------- */
+
+:root {
+  --lavender: #dcd3ff;
+  --lavender-dark: #9f8ad4;
+  --cream: #fff9ef;
+  --blush: #ffd9e2;
+  --pink: #ef9fb7;
+  --midnight: #17203b;
+  --midnight-soft: #293451;
+  --paper: #fffdf8;
+  --white: #ffffff;
+  --text-soft: #596079;
+
+  --shadow:
+    0 18px 50px rgba(23, 32, 59, 0.12);
+
+  --radius: 24px;
+}
+
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    radial-gradient(circle at 15% 15%, #efeaff 0, transparent 30%),
+    radial-gradient(circle at 85% 25%, #ffe6ed 0, transparent 28%),
+    var(--cream);
+
+  color: var(--midnight);
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* -------------------------------------
+   General layout
+------------------------------------- */
+
+.page-wrapper {
+  width: min(1100px, calc(100% - 32px));
+
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  color: #8e6ac0;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.17em;
+}
+
+.primary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  background: var(--midnight);
+  color: var(--white);
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 9px 22px rgba(23, 32, 59, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 27px rgba(23, 32, 59, 0.24);
+}
+
+
+/* -------------------------------------
+   Hero
+------------------------------------- */
+
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  max-width: 760px;
+
+  padding: 70px 0;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(3rem, 10vw, 6.5rem);
+
+  line-height: 0.92;
+
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #a079bd;
+}
+
+.hero-text {
+  max-width: 610px;
+
+  margin: 28px 0 20px;
+
+  color: var(--text-soft);
+
+  font-size: clamp(1rem, 2.7vw, 1.22rem);
+
+  line-height: 1.75;
+}
+
+.case-number {
+  display: inline-block;
+
+  margin-bottom: 28px;
+
+  padding: 8px 13px;
+
+  border: 1px dashed #ad98d5;
+
+  border-radius: 8px;
+
+  color: #7c679a;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  font-family: monospace;
+
+  font-size: 0.82rem;
+}
+
+
+/* -------------------------------------
+   Case file
+------------------------------------- */
+
+.case-section {
+  padding: 30px 0 90px;
+}
+
+.case-card {
+  background: var(--paper);
+
+  border: 1px solid rgba(23, 32, 59, 0.07);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  overflow: hidden;
+}
+
+.case-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 17px 22px;
+
+  background: var(--midnight);
+
+  color: white;
+
+  font-family: monospace;
+
+  font-size: 0.82rem;
+
+  letter-spacing: 0.12em;
+}
+
+.status-badge {
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: #daf6e9;
+
+  color: #17603e;
+
+  font-size: 0.7rem;
+
+  font-weight: bold;
+}
+
+.case-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 35px;
+
+  padding: 28px;
+}
+
+
+/* Real uploaded image */
+
+.evidence-photo {
+  position: relative;
+
+  margin: 0 auto;
+
+  width: min(100%, 500px);
+
+  padding: 13px 13px 45px;
+
+  background: white;
+
+  border: 1px solid #eee9df;
+
+  box-shadow:
+    0 18px 35px rgba(28, 26, 45, 0.14);
+
+  transform: rotate(-1.3deg);
+}
+
+.evidence-photo img {
+  width: 100%;
+
+  height: auto;
+
+  /* Important: no cropping or face modification */
+  object-fit: contain;
+}
+
+.photo-caption {
+  margin: 13px 0 0;
+
+  text-align: center;
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    cursive;
+
+  color: #444;
+
+  font-size: 0.95rem;
+}
+
+.tape {
+  position: absolute;
+
+  z-index: 2;
+
+  width: 95px;
+  height: 29px;
+
+  background: rgba(219, 205, 255, 0.72);
+
+  top: -13px;
+}
+
+.tape-left {
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(2deg);
+}
+
+
+/* Details */
+
+.case-details {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.small-label {
+  color: #a486bf;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 5px;
+}
+
+.case-details h2 {
+  margin: 0 0 24px;
+
+  font-family: Georgia, serif;
+
+  font-size: 2.7rem;
+}
+
+.detail-row {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px dashed #d9d3c9;
+}
+
+.detail-row span {
+  color: var(--text-soft);
+
+  font-size: 0.8rem;
+}
+
+.detail-row strong {
+  font-size: 1rem;
+}
+
+.case-note {
+  margin-top: 24px;
+
+  padding: 17px;
+
+  background: #fff2d8;
+
+  border-radius: 13px;
+
+  color: #604e36;
+
+  line-height: 1.65;
+
+  transform: rotate(0.5deg);
+}
+
+
+/* -------------------------------------
+   Quiz
+------------------------------------- */
+
+.quiz-section {
+  padding: 50px 0 100px;
+}
+
+.section-heading {
+  max-width: 740px;
+
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(2rem, 5vw, 3.2rem);
+
+  line-height: 1.15;
+}
+
+.section-heading > p:last-child {
+  color: var(--text-soft);
+
+  line-height: 1.65;
+}
+
+.question-card {
+  margin: 22px 0;
+
+  padding: 26px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(143, 118, 184, 0.14);
+
+  box-shadow:
+    0 9px 30px rgba(23, 32, 59, 0.07);
+}
+
+.question-number {
+  color: #9b7dc0;
+
+  font-family: monospace;
+
+  font-weight: bold;
+
+  font-size: 0.78rem;
+}
+
+.question-card h3 {
+  margin: 8px 0 20px;
+
+  font-size: 1.25rem;
+
+  line-height: 1.45;
+}
+
+.answers {
+  display: grid;
+
+  gap: 10px;
+}
+
+.answer-btn {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  background: var(--white);
+
+  border:
+    1px solid #ded6ec;
+
+  border-radius: 12px;
+
+  color: var(--midnight);
+
+  font: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.answer-btn:hover {
+  transform: translateX(3px);
+
+  border-color: #aa90ce;
+
+  background: #faf7ff;
+}
+
+.answer-btn.correct {
+  background: #e6f7ee;
+
+  border-color: #75b995;
+
+  color: #246347;
+}
+
+.answer-btn.wrong {
+  background: #fff0f1;
+
+  border-color: #dd9da4;
+
+  color: #8e414a;
+}
+
+.answer-btn:disabled {
+  cursor: default;
+
+  opacity: 0.85;
+}
+
+.answer-response {
+  min-height: 23px;
+
+  margin: 14px 0 0;
+
+  color: #755b92;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+}
+
+
+/* -------------------------------------
+   Completion box
+------------------------------------- */
+
+.quiz-complete {
+  display: none;
+
+  margin-top: 45px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f1e9ff,
+      #ffe4eb
+    );
+
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+}
+
+.quiz-complete.visible {
+  display: block;
+
+  animation: reveal 0.6s ease both;
+}
+
+.quiz-complete h2 {
+  margin: 20px 0 10px;
+
+  font-family: Georgia, serif;
+
+  font-size: 2rem;
+}
+
+.quiz-complete p {
+  max-width: 600px;
+
+  margin: 0 auto 24px;
+
+  color: var(--text-soft);
+
+  line-height: 1.7;
+}
+
+.stamp {
+  display: inline-block;
+
+  padding: 9px 15px;
+
+  border: 3px solid #916eb2;
+
+  color: #916eb2;
+
+  font-weight: 900;
+
+  letter-spacing: 0.09em;
+
+  transform: rotate(-3deg);
+}
+
+
+/* -------------------------------------
+   Floating decorations
+------------------------------------- */
+
+.floating-shape {
+  position: fixed;
+
+  z-index: -1;
+
+  opacity: 0.35;
+
+  pointer-events: none;
+
+  animation:
+    float 7s ease-in-out infinite;
+}
+
+.star {
+  color: #9279c2;
+
+  font-size: 2rem;
+}
+
+.heart {
+  color: #e39ab0;
+
+  font-size: 1.7rem;
+}
+
+.star-1 {
+  top: 15%;
+  left: 4%;
+}
+
+.star-2 {
+  top: 66%;
+  right: 5%;
+
+  animation-delay: 1.5s;
+}
+
+.heart-1 {
+  top: 30%;
+  right: 9%;
+
+  animation-delay: 0.8s;
+}
+
+.heart-2 {
+  bottom: 12%;
+  left: 6%;
+
+  animation-delay: 2s;
+}
+
+
+/* -------------------------------------
+   Footer
+------------------------------------- */
+
+footer {
+  padding: 24px;
+
+  text-align: center;
+
+  color: #7e8292;
+
+  font-size: 0.78rem;
+}
+
+
+/* -------------------------------------
+   Animation
+------------------------------------- */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(4deg);
+  }
+}
+
+@keyframes reveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* -------------------------------------
+   Desktop
+------------------------------------- */
+
+@media (min-width: 800px) {
+
+  .case-grid {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+
+    padding: 45px;
+  }
+
+  .detail-row {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    gap: 30px;
+  }
+
+  .detail-row strong {
+    text-align: right;
+  }
+
+  .question-card {
+    padding: 32px;
+  }
+
+  .answers {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .answer-btn {
+    text-align: center;
+  }
+}
+
+
+/* -------------------------------------
+   Small phones
+------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .page-wrapper {
+    width: min(
+      100% - 22px,
+      1100px
+    );
+  }
+
+  .hero {
+    min-height: 82vh;
+
+    padding: 45px 6px;
+  }
+
+  .case-grid {
+    padding: 19px;
+  }
+
+  .question-card {
+    padding: 20px;
+  }
+
+  .quiz-complete {
+    padding: 26px 18px;
+  }
+}
+
+
+/* -------------------------------------
+   Accessibility
+------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.001ms !important;
+  }
+}

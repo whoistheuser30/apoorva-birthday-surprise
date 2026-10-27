@@ -1751,3 +1751,558 @@ footer {
   }
 
 }
+
+
+/* =================================================
+   PAGE 4 — A LETTER FOR APOORVA
+================================================= */
+
+.page-letter {
+  background:
+    radial-gradient(
+      circle at 10% 12%,
+      #eee8ff 0,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      #ffe6ec 0,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 45% 88%,
+      #fff0d9 0,
+      transparent 28%
+    ),
+    var(--cream);
+}
+
+
+/* Hero */
+
+.letter-hero {
+  max-width: 820px;
+
+  padding:
+    85px 0
+    75px;
+}
+
+.letter-hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(3.2rem, 10vw, 6.5rem);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+}
+
+.letter-hero h1 span {
+  display: block;
+
+  color: #c47f99;
+}
+
+.letter-hero > p:last-child {
+  max-width: 620px;
+
+  margin-top: 28px;
+
+  color: var(--text-soft);
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+}
+
+
+/* Opening photos */
+
+.final-gallery {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 28px;
+
+  max-width: 950px;
+
+  margin:
+    0 auto
+    110px;
+
+  align-items: center;
+}
+
+.final-photo {
+  margin: 0;
+
+  padding:
+    12px
+    12px
+    42px;
+
+  background: white;
+
+  border:
+    1px solid #ece6dd;
+
+  box-shadow:
+    0 20px 45px
+    rgba(28, 27, 48, 0.13);
+}
+
+.final-photo img {
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.final-photo figcaption {
+  margin-top: 13px;
+
+  text-align: center;
+
+  color: #60606a;
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    cursive;
+
+  font-size: 0.9rem;
+}
+
+.photo-a {
+  transform:
+    rotate(-2deg);
+}
+
+.photo-b {
+  transform:
+    rotate(2deg);
+}
+
+.photo-c {
+  transform:
+    rotate(-1deg);
+}
+
+
+/* Letter paper */
+
+.letter-paper {
+  position: relative;
+
+  max-width: 820px;
+
+  margin:
+    0 auto
+    110px;
+
+  padding:
+    55px
+    32px;
+
+  background:
+    #fffdf8;
+
+  border:
+    1px solid #eee4d8;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(35, 31, 52, 0.12);
+}
+
+.letter-paper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  border:
+    1px solid
+    rgba(177, 150, 189, 0.18);
+
+  pointer-events: none;
+}
+
+.letter-date {
+  margin-bottom: 30px;
+
+  text-align: right;
+
+  color: #9a869f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-style: italic;
+}
+
+.letter-paper h2 {
+  margin:
+    0
+    0
+    27px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3rem);
+}
+
+.letter-paper > p {
+  position: relative;
+
+  margin:
+    0
+    0
+    20px;
+
+  color: #4d5262;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    1.04rem;
+
+  line-height: 1.9;
+}
+
+.letter-signoff {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 40px;
+
+  color: #8d6981;
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+.letter-signoff span {
+  font-size: 1.4rem;
+
+  font-style: italic;
+}
+
+.letter-signoff strong {
+  color: var(--midnight);
+
+  font-size: 0.9rem;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* Quotes */
+
+.birthday-quotes {
+  padding:
+    20px 0
+    110px;
+}
+
+.quote-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 18px;
+}
+
+.quote-grid blockquote {
+  margin: 0;
+
+  padding: 27px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border:
+    1px solid
+    rgba(143, 116, 163, 0.12);
+
+  border-radius: 18px;
+
+  color: #55475f;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.08rem;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  box-shadow:
+    0 10px 30px
+    rgba(23, 32, 59, 0.05);
+}
+
+
+/* Gallery */
+
+.birthday-gallery {
+  padding:
+    20px 0
+    110px;
+}
+
+.birthday-photo-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 24px;
+}
+
+.birthday-photo {
+  margin: 0;
+
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    1px solid #eee7de;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 34px
+    rgba(23, 32, 59, 0.09);
+}
+
+.birthday-photo img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f8f5ef;
+}
+
+.birthday-photo figcaption {
+  padding:
+    16px
+    18px
+    19px;
+
+  color: #636879;
+
+  font-size: 0.9rem;
+
+  line-height: 1.55;
+}
+
+
+/* Ending */
+
+.birthday-ending {
+  max-width: 760px;
+
+  margin:
+    20px auto
+    100px;
+
+  padding:
+    55px
+    30px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ebe4ff,
+      #ffe3ea,
+      #fff5dd
+    );
+
+  border-radius: 28px;
+
+  box-shadow:
+    var(--shadow);
+}
+
+.ending-heart {
+  margin-bottom: 10px;
+
+  color: #d38aa4;
+
+  font-size: 3rem;
+
+  animation:
+    heartbeat 2.3s
+    ease-in-out infinite;
+}
+
+.birthday-ending h2 {
+  margin:
+    7px
+    0
+    15px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 6vw, 3.2rem);
+}
+
+.birthday-ending p:not(.eyebrow) {
+  max-width: 570px;
+
+  margin:
+    0 auto
+    27px;
+
+  color: var(--text-soft);
+
+  line-height: 1.75;
+}
+
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+}
+
+
+/* Desktop */
+
+@media (min-width: 750px) {
+
+  .final-gallery {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .final-photo:nth-child(2) {
+    margin-top: 55px;
+  }
+
+  .quote-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .birthday-photo-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .wide-memory {
+    grid-column:
+      1 / -1;
+
+    max-width: 600px;
+
+    justify-self: center;
+  }
+
+  .letter-paper {
+    padding:
+      70px
+      75px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+  .letter-hero {
+    padding:
+      55px 3px
+      50px;
+  }
+
+  .final-gallery {
+    width: 92%;
+  }
+
+  .letter-paper {
+    padding:
+      42px
+      22px;
+  }
+
+  .letter-paper::before {
+    inset: 9px;
+  }
+
+  .letter-paper > p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .birthday-ending {
+    padding:
+      40px
+      20px;
+  }
+
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ending-heart {
+    animation: none;
+  }
+
+}

@@ -1272,3 +1272,482 @@ footer {
   }
 
 }
+
+
+/* =================================================
+   PAGE 3 — FROM FACEBOOK TO REAL LIFE
+================================================= */
+
+.real-life-hero {
+  max-width: 820px;
+
+  padding:
+    85px 0
+    75px;
+}
+
+.real-life-hero h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(3rem, 9vw, 6.2rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.real-life-hero h1 span {
+  display: block;
+
+  color: #9c82bf;
+}
+
+.real-life-hero > p:last-child {
+  max-width: 680px;
+
+  margin-top: 28px;
+
+  color: var(--text-soft);
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+}
+
+
+/* Main friendship story */
+
+.friendship-story {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 55px;
+
+  padding:
+    30px 0
+    100px;
+}
+
+.story-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.story-copy h2 {
+  margin:
+    0
+    0
+    23px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3.2rem);
+
+  line-height: 1.15;
+}
+
+.story-copy > p {
+  margin:
+    0
+    0
+    17px;
+
+  color: #52596c;
+
+  line-height: 1.8;
+}
+
+
+/* Meeting photos */
+
+.meeting-stack {
+  position: relative;
+
+  min-height: 650px;
+}
+
+.scrap-photo {
+  position: absolute;
+
+  width:
+    min(75%, 360px);
+
+  margin: 0;
+
+  padding:
+    12px
+    12px
+    42px;
+
+  background: white;
+
+  border:
+    1px solid #eee8df;
+
+  box-shadow:
+    0 19px 40px
+    rgba(20, 25, 45, 0.15);
+}
+
+.scrap-photo img {
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.scrap-photo figcaption {
+  margin-top: 13px;
+
+  color: #555;
+
+  text-align: center;
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    cursive;
+
+  font-size: 0.88rem;
+
+  line-height: 1.4;
+}
+
+.tilt-left {
+  top: 0;
+  left: 2%;
+
+  transform:
+    rotate(-4deg);
+}
+
+.tilt-right {
+  right: 2%;
+  bottom: 0;
+
+  transform:
+    rotate(4deg);
+}
+
+
+/* Memory fragments */
+
+.memory-fragments {
+  padding:
+    40px 0
+    100px;
+}
+
+.fragment-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 18px;
+}
+
+.memory-fragment {
+  padding: 27px;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  border:
+    1px solid
+    rgba(126, 103, 160, 0.12);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(22, 30, 55, 0.06);
+}
+
+.fragment-icon {
+  display: inline-flex;
+
+  width: 47px;
+  height: 47px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #eee7ff;
+
+  font-size: 1.4rem;
+}
+
+.memory-fragment h3 {
+  margin:
+    0
+    0
+    12px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.35rem;
+}
+
+.memory-fragment p {
+  margin:
+    0
+    0
+    10px;
+
+  color: var(--text-soft);
+
+  line-height: 1.7;
+}
+
+
+/* Creative memory */
+
+.creative-memory {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 45px;
+
+  align-items: center;
+
+  padding:
+    40px 0
+    105px;
+}
+
+.creative-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.drawing-frame {
+  margin: 0;
+
+  width:
+    min(100%, 620px);
+
+  padding: 18px;
+
+  background:
+    #fffdf8;
+
+  border:
+    1px solid #eae1d7;
+
+  box-shadow:
+    0 20px 45px
+    rgba(27, 30, 50, 0.12);
+
+  transform:
+    rotate(-1deg);
+}
+
+.drawing-frame img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.creative-copy h2 {
+  margin:
+    5px
+    0
+    18px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3rem);
+}
+
+.creative-copy p:not(.eyebrow) {
+  color: var(--text-soft);
+
+  line-height: 1.75;
+}
+
+
+/* Casual gallery */
+
+.casual-gallery {
+  padding:
+    45px 0
+    110px;
+}
+
+.casual-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 25px;
+}
+
+.gallery-card {
+  margin: 0;
+
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 20px;
+
+  border:
+    1px solid #eee9e0;
+
+  box-shadow:
+    0 15px 35px
+    rgba(23, 32, 59, 0.09);
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f7f4ed;
+}
+
+.gallery-card figcaption {
+  padding:
+    17px
+    18px
+    20px;
+
+  color: #62687b;
+
+  font-size: 0.9rem;
+
+  line-height: 1.55;
+}
+
+
+/* Final page transition */
+
+.final-transition {
+  background:
+    linear-gradient(
+      145deg,
+      #e9e2ff,
+      #ffe7ec,
+      #fff6df
+    );
+}
+
+
+/* Desktop */
+
+@media (min-width: 850px) {
+
+  .friendship-story {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 75px;
+
+    align-items: center;
+  }
+
+  .fragment-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .creative-memory {
+    grid-template-columns:
+      1.15fr
+      0.85fr;
+
+    gap: 70px;
+  }
+
+  .casual-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .real-life-hero {
+    padding:
+      55px 3px
+      50px;
+  }
+
+  .meeting-stack {
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .scrap-photo {
+    position: relative;
+
+    width: 88%;
+
+    margin: 0 auto;
+  }
+
+  .tilt-left,
+  .tilt-right {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .tilt-left {
+    transform:
+      rotate(-2deg);
+  }
+
+  .tilt-right {
+    transform:
+      rotate(2deg);
+  }
+
+}

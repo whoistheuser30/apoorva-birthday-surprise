@@ -97,7 +97,7 @@ function getCorrectResponse(question) {
       "Correct. Birthday records successfully verified. 🎂",
 
     "2":
-      "Exactly. The evidence is frankly overwhelming. 😹",
+      "Correct! 😂❤️ But honestly, your smile is guilty of stealing all the attention.",
 
     "3":
       "Correct. Time apparently behaves differently during those calls. 📞"
@@ -118,7 +118,7 @@ function getFunnyWrongResponse(question) {
       "Suspicious answer. Fortunately, the investigators have the correct date.",
 
     "2":
-      "Interesting theory, but Exhibit A has already destroyed your defence.",
+      "Wrong answer! 😹 Try again, madam. The evidence against your cuteness is overwhelming!",
 
     "3":
       "Nice attempt. Historical evidence suggests otherwise. 😌"

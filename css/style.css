@@ -2471,3 +2471,534 @@ footer {
   }
 }
 
+
+/* ==========================================
+   PAGE 4 — ROMANTIC BIRTHDAY LETTER
+========================================== */
+
+body.page-letter {
+  background:
+    radial-gradient(ellipse at 10% 10%,
+      rgba(255, 190, 215, 0.35), transparent 42%),
+    radial-gradient(ellipse at 90% 35%,
+      rgba(207, 183, 255, 0.28), transparent 42%),
+    linear-gradient(150deg, #fff8f0, #fff0f5 55%, #f8f0ff);
+
+  overflow-x: hidden;
+}
+
+/* Floating decorations */
+
+.romantic-atmosphere {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.romantic-atmosphere span {
+  position: absolute;
+  user-select: none;
+}
+
+.love-balloon {
+  font-size: 2.5rem;
+  opacity: 0.65;
+  animation: balloonFloat 9s ease-in-out infinite;
+}
+
+.balloon-one {
+  left: 3%;
+  bottom: -100px;
+  animation-delay: 0s;
+}
+
+.balloon-two {
+  right: 4%;
+  bottom: -110px;
+  animation-delay: 3s;
+}
+
+.balloon-three {
+  left: 14%;
+  bottom: -100px;
+  animation-delay: 5s;
+  font-size: 2rem;
+}
+
+.floating-love {
+  color: #e58aaf;
+  font-size: 1.7rem;
+  opacity: 0;
+  animation: heartDrift 11s linear infinite;
+}
+
+.floating-love:nth-child(4) {
+  left: 12%;
+  bottom: -30px;
+  animation-delay: 1s;
+}
+
+.floating-love:nth-child(5) {
+  left: 75%;
+  bottom: -30px;
+  animation-delay: 4s;
+}
+
+.floating-love:nth-child(6) {
+  left: 40%;
+  bottom: -30px;
+  animation-delay: 2s;
+}
+
+.floating-love:nth-child(7) {
+  left: 88%;
+  bottom: -30px;
+  animation-delay: 6s;
+}
+
+.floating-love:nth-child(8) {
+  left: 60%;
+  bottom: -30px;
+  animation-delay: 8s;
+}
+
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-45vh) rotate(8deg);
+  }
+  100% {
+    transform: translateY(-115vh) rotate(-5deg);
+  }
+}
+
+@keyframes heartDrift {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: .65;
+  }
+  80% {
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(35deg) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* Keep the actual content above the decorations */
+
+body.page-letter .page-wrapper,
+body.page-letter footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Romantic opening */
+
+.page-letter .letter-hero {
+  padding-top: 65px;
+  padding-bottom: 60px;
+  text-align: center;
+  animation: letterReveal 1s ease both;
+}
+
+.page-letter .letter-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 8vw, 5.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #252441;
+}
+
+.page-letter .letter-hero h1 span {
+  display: block;
+  color: #c16c98;
+}
+
+.page-letter .letter-hero > p:last-child {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: #75647c;
+  line-height: 1.9;
+}
+
+/* Letter paper */
+
+.page-letter .letter-paper {
+  position: relative;
+  max-width: 850px;
+  margin: 30px auto 100px;
+  padding: clamp(28px, 6vw, 65px);
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(255, 253, 248, .97),
+                    rgba(255, 251, 245, .97));
+
+  border: 1px solid #f0d9df;
+  border-radius: 5px;
+  outline: 1px solid rgba(210, 157, 177, .3);
+  outline-offset: 9px;
+
+  box-shadow:
+    0 25px 70px rgba(101, 60, 92, .12),
+    0 5px 15px rgba(101, 60, 92, .05);
+
+  animation: paperReveal 1.1s ease both;
+}
+
+/* Decorative corner hearts */
+
+.page-letter .letter-paper::before {
+  content: "♡";
+  position: absolute;
+  top: 12px;
+  right: 22px;
+  color: #e7b1c7;
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  opacity: .7;
+}
+
+.page-letter .letter-date {
+  margin-bottom: 24px;
+  color: #a47c9c;
+  font-family: Georgia, serif;
+  font-style: italic;
+  text-align: right;
+}
+
+.page-letter .letter-paper h2 {
+  color: #252441;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 6vw, 3.3rem);
+  line-height: 1.15;
+  margin: 0 0 25px;
+}
+
+.page-letter .letter-paper > p {
+  color: #575269;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.04rem;
+  line-height: 2;
+  margin: 0 0 20px;
+}
+
+.page-letter .letter-signoff {
+  margin-top: 38px;
+  padding-top: 25px;
+  border-top: 1px solid #efdce5;
+  color: #9f5c83;
+  line-height: 2;
+}
+
+.page-letter .letter-signoff span,
+.page-letter .letter-signoff strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page-letter .letter-signoff span {
+  font-size: 1.35rem;
+}
+
+.page-letter .letter-signoff strong {
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+/* Entrance animations */
+
+@keyframes letterReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes paperReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+  .page-letter .letter-hero {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+
+  .page-letter .letter-paper {
+    margin: 25px auto 65px;
+    padding: 30px 23px;
+  }
+
+  .page-letter .letter-paper > p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .love-balloon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .romantic-atmosphere span,
+  .page-letter .letter-hero,
+  .page-letter .letter-paper {
+    animation: none !important;
+  }
+}
+
+
+/* ==========================================
+   BIRTHDAY CAKE AND CANDLE ANIMATION
+========================================== */
+
+.birthday-cake-surprise {
+  position: relative;
+  margin: 30px auto 100px;
+  padding: 45px 20px;
+  text-align: center;
+  border-radius: 28px;
+
+  background:
+    radial-gradient(ellipse at top, #fff 0%, transparent 70%),
+    linear-gradient(140deg, #ffe6ef, #f0e5ff, #fff0d9);
+  border: 1px solid rgba(222, 164, 199, .3);
+  box-shadow: 0 20px 55px rgba(104, 66, 115, .08);
+}
+
+.birthday-cake-surprise h2 {
+  margin: 12px 0;
+  color: #39304e;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.cake-intro,
+.cake-message {
+  color: #76657e;
+  line-height: 1.8;
+}
+
+.cake-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
+  margin: 25px auto 0;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, .55);
+  border: 1px solid rgba(216, 166, 199, .4);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.cake-scene {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 180px;
+}
+
+.cake-base {
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 190px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c7a6db;
+  box-shadow: 0 8px 15px rgba(104, 66, 115, .15);
+}
+
+.cake-body {
+  position: absolute;
+  left: 30px;
+  bottom: 27px;
+  width: 160px;
+  height: 78px;
+  overflow: hidden;
+  border-radius: 12px 12px 22px 22px;
+  background: linear-gradient(90deg, #f49abc, #ffd0df, #ed8cb2);
+  box-shadow: inset -10px 0 0 rgba(177, 72, 129, .12);
+}
+
+.cake-top {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 90px;
+  width: 160px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff0f7;
+  border: 2px solid #f7c6dc;
+}
+
+.cake-icing {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  border-bottom: 5px dotted #d76599;
+}
+
+.cake-decoration {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  color: #fff8ff;
+  font-size: 1.1rem;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.cake-candle {
+  position: absolute;
+  z-index: 3;
+  bottom: 115px;
+  width: 10px;
+  height: 42px;
+  border-radius: 4px 4px 1px 1px;
+  background: repeating-linear-gradient(
+    135deg,
+    #fff6ba 0 5px,
+    #f3a2c3 5px 10px
+  );
+}
+
+.candle-left {
+  left: 76px;
+}
+
+.candle-middle {
+  left: 105px;
+  height: 50px;
+}
+
+.candle-right {
+  left: 134px;
+}
+
+.candle-flame {
+  position: absolute;
+  left: 1px;
+  top: -17px;
+  width: 8px;
+  height: 15px;
+  border-radius: 50% 50% 45% 45%;
+  background: #ffb52e;
+  box-shadow: 0 0 13px 5px rgba(255, 183, 56, .3);
+  transform-origin: center bottom;
+  animation: candleFlicker .65s ease-in-out infinite alternate;
+}
+
+@keyframes candleFlicker {
+  from {
+    transform: rotate(-7deg) scale(.9);
+  }
+  to {
+    transform: rotate(7deg) scale(1.08);
+  }
+}
+
+.cake-button-label {
+  display: inline-block;
+  margin-top: 8px;
+  color: #a45b85;
+  font-weight: 600;
+}
+
+.cake-message {
+  max-width: 480px;
+  margin: 24px auto 0;
+  padding: 0 12px;
+}
+
+.birthday-cake-surprise.blown-out .candle-flame {
+  opacity: 0;
+  transform: scale(0);
+  animation: none;
+}
+
+.birthday-cake-surprise.blown-out .cake-message {
+  color: #a34e81;
+  font-weight: 600;
+  animation: letterReveal .7s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candle-flame {
+    animation: none;
+  }
+}
+
+/* -------------- OPTIONAL ----------------*/
+
+/* Romantic photo gallery styling */
+
+.page-letter .final-photo,
+.page-letter .birthday-photo {
+  overflow: hidden;
+  border: 1px solid #f0dce5;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 12px 30px rgba(80, 50, 80, .10);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.page-letter .final-photo img,
+.page-letter .birthday-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.page-letter .final-photo:hover,
+.page-letter .birthday-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(80, 50, 80, .16);
+}
+
+.page-letter .final-photo figcaption,
+.page-letter .birthday-photo figcaption {
+  padding: 14px 16px;
+  color: #80667d;
+  font-family: Georgia, serif;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-letter .final-photo,
+  .page-letter .birthday-photo {
+    transition: none;
+  }
+}

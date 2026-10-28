@@ -192,6 +192,90 @@
 
     </section>
 
+  
+<!-- Question 1 -->
+<article class="question-card" data-question="1">
+
+  <p class="question-number">QUESTION 01</p>
+
+  <h3>What makes this picture so special? 😂</h3>
+
+  <div class="answers">
+
+    <button class="answer-btn" data-correct="false">
+      The no-brush confidence 😎
+    </button>
+
+    <button class="answer-btn" data-correct="true">
+      That cute morning smile ❤️
+    </button>
+
+    <button class="answer-btn" data-correct="false">
+      The camera survived the shock 😂
+    </button>
+
+  </div>
+
+  <p class="answer-response" aria-live="polite"></p>
+
+</article>
+
+
+<!-- Question 2 -->
+<article class="question-card" data-question="2">
+
+  <p class="question-number">QUESTION 02</p>
+
+  <h3>What is Apoorva's secret superpower? 😏</h3>
+
+  <div class="answers">
+
+    <button class="answer-btn" data-correct="false">
+      Making everyone do what she says 😌
+    </button>
+
+    <button class="answer-btn" data-correct="false">
+      Creating drama out of nothing 😂
+    </button>
+
+    <button class="answer-btn" data-correct="true">
+      Being cute and dramatic at the same time ❤️
+    </button>
+
+  </div>
+
+  <p class="answer-response" aria-live="polite"></p>
+
+</article>
+
+
+<!-- Question 3 -->
+<article class="question-card" data-question="3">
+
+  <p class="question-number">QUESTION 03</p>
+
+  <h3>What happens when Apoorva smiles unexpectedly? ❤️</h3>
+
+  <div class="answers">
+
+    <button class="answer-btn" data-correct="false">
+      Everyone acts completely normal 😇
+    </button>
+
+    <button class="answer-btn" data-correct="true">
+      Another investigation begins at my house 😂
+    </button>
+
+    <button class="answer-btn" data-correct="false">
+      The whole world stops spinning 🌍
+    </button>
+
+  </div>
+
+  <p class="answer-response" aria-live="polite"></p>
+
+</article>
+
 
     <!-- Continue -->
     <section class="case-transition">
@@ -225,5 +309,107 @@
     </p>
   </footer>
 
+
+<script>
+
+
+const questionCards = document.querySelectorAll(".question-card");
+const quizComplete = document.getElementById("quizComplete");
+
+let completedQuestions = 0;
+
+questionCards.forEach((card) => {
+  const buttons = card.querySelectorAll(".answer-btn");
+  const response = card.querySelector(".answer-response");
+
+  let answeredCorrectly = false;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+
+      // Allow another attempt if the question isn't solved.
+      if (answeredCorrectly) return;
+
+      const isCorrect = button.dataset.correct === "true";
+
+      // Remove old selection styles so she can try again.
+      buttons.forEach((btn) => {
+        btn.classList.remove("wrong", "correct");
+      });
+
+      if (isCorrect) {
+        answeredCorrectly = true;
+
+        button.classList.add("correct");
+
+        response.textContent =
+          getCorrectResponse(card.dataset.question);
+
+        // Lock only after a correct answer.
+        buttons.forEach((btn) => {
+          btn.disabled = true;
+        });
+
+        completedQuestions++;
+
+        if (completedQuestions === questionCards.length) {
+          setTimeout(() => {
+            if (quizComplete) {
+              quizComplete.classList.add("visible");
+
+              quizComplete.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+              });
+            }
+          }, 700);
+        }
+
+      } else {
+        // Wrong answers don't lock the question.
+        button.classList.add("wrong");
+
+        response.textContent =
+          getFunnyWrongResponse(card.dataset.question);
+      }
+    });
+  });
+});
+
+
+function getCorrectResponse(question) {
+  const responses = {
+    "1":
+      "Correct! ❤️ No toothbrush, no preparation, and still somehow adorable. 😂",
+
+    "2":
+      "Exactly! 😹 A dangerous combination of cuteness and drama. ❤️",
+
+    "3":
+      "Correct! 😂 One smile, and suddenly my house becomes a crime investigation scene. 🕵️❤️"
+  };
+
+  return responses[question] ||
+    "Correct! Investigation successfully completed. ❤️";
+}
+
+
+function getFunnyWrongResponse(question) {
+  const responses = {
+    "1":
+      "Nope! 😂 Look at that smile again. The evidence is right in front of you! ❤️",
+
+    "2":
+      "Wrong answer, madam! 😹 Your dramatic cuteness is still under investigation. Try again! 💕",
+
+    "3":
+      "Not quite! 😂 Remember what happened when my mom saw that picture? Investigation mode: ON! 🕵️❤️"
+  };
+
+  return responses[question] ||
+    "Not quite! 😂 Try another answer, detective. ❤️";
+}
+</script>
+  
 </body>
 </html>

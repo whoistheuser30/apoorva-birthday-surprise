@@ -3002,3 +3002,123 @@ body.page-letter footer {
     transition: none;
   }
 }
+
+
+/* ==========================================
+   FINAL LETTER — COLORFUL ROMANTIC PAPER
+   Add at the VERY END of css/style.css
+========================================== */
+
+body.page-letter {
+  background:
+    radial-gradient(ellipse at 8% 12%,
+      rgba(255, 177, 207, 0.45), transparent 38%),
+    radial-gradient(ellipse at 92% 38%,
+      rgba(192, 166, 255, 0.35), transparent 40%),
+    linear-gradient(145deg, #fff5f5, #fff0e5 45%, #f5edff);
+}
+
+/* Colourful letter paper */
+
+.page-letter .letter-paper {
+  position: relative;
+  max-width: 850px;
+  margin: 35px auto 100px;
+  padding: clamp(28px, 6vw, 65px);
+
+  background:
+    radial-gradient(ellipse at 0% 0%,
+      rgba(255, 221, 235, 0.7), transparent 42%),
+    radial-gradient(ellipse at 100% 100%,
+      rgba(229, 216, 255, 0.65), transparent 45%),
+    linear-gradient(135deg, #fffaf1, #fff5f9 55%, #faf4ff);
+
+  border: 1px solid #efcddd;
+  border-radius: 12px;
+
+  box-shadow:
+    0 25px 65px rgba(140, 82, 125, 0.14),
+    0 5px 18px rgba(120, 83, 133, 0.07);
+
+  outline: 1px solid rgba(222, 160, 192, 0.35);
+  outline-offset: 7px;
+}
+
+/* Delicate decorative corner */
+
+.page-letter .letter-paper::before {
+  content: "♡";
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  color: #dc8eb3;
+  font-family: Georgia, serif;
+  font-size: 2.6rem;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Date */
+
+.page-letter .letter-date {
+  color: #a46b96;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* Greeting */
+
+.page-letter .letter-paper h2 {
+  color: #302743;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 6vw, 3.3rem);
+  line-height: 1.2;
+}
+
+/* Letter text */
+
+.page-letter .letter-paper > p {
+  color: #554c64;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 2;
+  margin-bottom: 21px;
+}
+
+/* Birthday sign-off */
+
+.page-letter .letter-signoff {
+  margin-top: 38px;
+  padding-top: 24px;
+  border-top: 1px solid #ebcadd;
+  color: #ad5788;
+  line-height: 2;
+}
+
+.page-letter .letter-signoff span {
+  color: #bd5d91;
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+}
+
+.page-letter .letter-signoff strong {
+  color: #80618e;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .page-letter .letter-paper {
+    margin: 25px auto 65px;
+    padding: 32px 23px;
+    border-radius: 10px;
+  }
+
+  .page-letter .letter-paper > p {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+}

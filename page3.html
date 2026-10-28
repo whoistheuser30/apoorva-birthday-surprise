@@ -386,5 +386,24 @@
     </p>
   </footer>
 
+<script>
+  function answerLove(answer) {
+    const response = document.getElementById("love-response");
+
+    response.hidden = false;
+
+    response.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+    // Both answers lead to the same playful response.
+    if (answer === "yes" || answer === "no") {
+      response.querySelector("h3").textContent =
+        "I know what's on your mind! 😏💗";
+    }
+  }
+</script>
+
 </body>
 </html>

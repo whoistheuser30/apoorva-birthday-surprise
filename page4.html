@@ -10,6 +10,18 @@
 </head>
 
 <body class="page-letter">
+  
+  <!-- Romantic floating decorations -->
+  <div class="romantic-atmosphere" aria-hidden="true">
+    <span class="love-balloon balloon-one">🎈</span>
+    <span class="love-balloon balloon-two">🎈</span>
+    <span class="love-balloon balloon-three">💗</span>
+    <span class="floating-love">♡</span>
+    <span class="floating-love">♥</span>
+    <span class="floating-love">✧</span>
+    <span class="floating-love">💕</span>
+    <span class="floating-love">✨</span>
+  </div>
 
   <div class="floating-shape star star-1">✦</div>
   <div class="floating-shape heart heart-1">♡</div>
@@ -171,6 +183,56 @@
 
     </section>
 
+    
+<!-- Birthday cake surprise -->
+<section class="birthday-cake-surprise">
+
+  <p class="eyebrow">A LITTLE BIRTHDAY MAGIC</p>
+
+  <h2>Make a wish, Apoorva! 🎂</h2>
+
+  <p class="cake-intro">
+    A little cake, a little candlelight, and lots of happiness for you.
+  </p>
+
+  <button
+    type="button"
+    class="cake-button"
+    id="cake-button"
+    aria-label="Blow out the birthday candles">
+
+    <span class="cake-scene" aria-hidden="true">
+
+      <span class="cake-candle candle-left">
+        <span class="candle-flame"></span>
+      </span>
+
+      <span class="cake-candle candle-middle">
+        <span class="candle-flame"></span>
+      </span>
+
+      <span class="cake-candle candle-right">
+        <span class="candle-flame"></span>
+      </span>
+
+      <span class="cake-top"></span>
+      <span class="cake-body">
+        <span class="cake-icing"></span>
+        <span class="cake-decoration">♥ ♥ ♥</span>
+      </span>
+      <span class="cake-base"></span>
+
+    </span>
+
+    <span class="cake-button-label">Tap to make a wish ✨</span>
+  </button>
+
+  <p class="cake-message" id="cake-message" aria-live="polite">
+    May all your little wishes find their way to you. 💗
+  </p>
+
+</section>
+
 
     <!-- Original quotes -->
     <section class="birthday-quotes">
@@ -321,5 +383,47 @@
     </p>
   </footer>
 
+
+<script>
+  const cakeButton = document.getElementById("cake-button");
+  const cakeSection = document.querySelector(
+    ".birthday-cake-surprise"
+  );
+  const cakeMessage = document.getElementById("cake-message");
+  const cakeButtonLabel = document.querySelector(
+    ".cake-button-label"
+  );
+
+  if (cakeButton && cakeSection && cakeMessage) {
+    cakeButton.addEventListener("click", function () {
+      const alreadyBlown = cakeSection.classList.contains(
+        "blown-out"
+      );
+
+      if (alreadyBlown) {
+        cakeSection.classList.remove("blown-out");
+        cakeMessage.textContent =
+          "May all your little wishes find their way to you. 💗";
+        cakeButtonLabel.textContent = "Tap to make a wish ✨";
+        cakeButton.setAttribute(
+          "aria-label",
+          "Blow out the birthday candles"
+        );
+      } else {
+        cakeSection.classList.add("blown-out");
+        cakeMessage.textContent =
+          "Wish made! 🎂💗 May October 30 bring you a beautiful new year full of love, laughter and happiness.";
+        cakeButtonLabel.textContent =
+          "Your wish is sent! 💖";
+        cakeButton.setAttribute(
+          "aria-label",
+          "Relight the birthday candles"
+        );
+      }
+    });
+  }
+</script>
+
+  
 </body>
 </html>

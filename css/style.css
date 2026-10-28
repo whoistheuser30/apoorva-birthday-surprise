@@ -2306,3 +2306,168 @@ footer {
   }
 
 }
+
+
+/* =========================================
+   LOVE QUESTION — BIRTHDAY SURPRISE
+========================================= */
+
+.love-question-section {
+  padding: 55px 0 100px;
+  text-align: center;
+}
+
+.love-question-card {
+  max-width: 680px;
+  margin: 25px auto 0;
+  padding: 45px 30px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(156, 130, 191, 0.2);
+  border-radius: 28px;
+  box-shadow: 0 20px 55px rgba(45, 34, 70, 0.09);
+}
+
+.love-heart {
+  color: #d76b98;
+  font-size: 4rem;
+  line-height: 1.2;
+  animation: lovePulse 1.5s ease-in-out infinite;
+}
+
+.love-question-card h2 {
+  margin: 15px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  color: #40334f;
+}
+
+.love-question {
+  margin: 22px 0 12px;
+  color: #a45b85;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  font-weight: bold;
+}
+
+.love-subtitle {
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.love-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.love-btn {
+  min-width: 145px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.love-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(50, 30, 60, 0.13);
+}
+
+.yes-btn {
+  color: white;
+  background: linear-gradient(135deg, #d66b9b, #b87bd2);
+}
+
+.no-btn {
+  color: #65516e;
+  background: #f0e9fa;
+  border: 1px solid #e1d4ef;
+}
+
+.love-response {
+  margin-top: 32px;
+  padding: 28px 22px;
+  background: linear-gradient(145deg, #fff0f6, #f3ecff);
+  border: 1px solid #f0d9eb;
+  border-radius: 22px;
+  animation: responseAppear 0.45s ease both;
+}
+
+.love-response[hidden] {
+  display: none;
+}
+
+.response-heart {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.love-response h3 {
+  margin: 8px 0 14px;
+  color: #92547e;
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.love-response p {
+  color: #62566c;
+  line-height: 1.8;
+}
+
+.love-response .response-small {
+  margin: 20px 0 25px;
+  font-weight: 600;
+}
+
+@keyframes lovePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes responseAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .love-question-section {
+    padding: 35px 0 65px;
+  }
+
+  .love-question-card {
+    padding: 32px 18px;
+    border-radius: 22px;
+  }
+
+  .love-buttons {
+    gap: 12px;
+  }
+
+  .love-btn {
+    min-width: 125px;
+    padding: 14px 20px;
+  }
+
+  .love-response {
+    padding: 24px 16px;
+  }
+}
+
